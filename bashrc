@@ -6,3 +6,4 @@
 # Author: Mike LaSpina
 #
 
+PS1="[\u@\h \W]\$ "
