@@ -1,0 +1,21 @@
+# -*- mode: shell-script; coding: utf-8; fill-column: 78; -*-
+
+#
+# Bash customizations specific to New Relic
+#
+# Author: Mike LaSpina
+#
+
+DOTFILES=~/dotfiles
+
+if [[ -f "${DOTFILES}/bashrc" ]]; then
+   source "${DOTFILES}/bashrc"
+fi
+
+#
+# ENV customizations
+#
+
+PATH="/opt/nr/camp/bin:$PATH"
+
+export PATH
