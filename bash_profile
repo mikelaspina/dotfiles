@@ -6,8 +6,8 @@
 # Author: Mike LaSpina
 #
 
-if [[ -f '~/.bashrc' ]]; then
-    source ~/.bashrc
+if [[ -r "${HOME}/.bashrc" ]]; then
+    source "${HOME}/.bashrc"
 fi
 
 
