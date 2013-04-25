@@ -7,3 +7,11 @@
 #
 
 PS1="[\u@\h \W]\$ "
+
+#
+# Aliases
+#
+
+alias la="ls -lA"
+alias ll="ls -l"
+alias lsa="ls -lah"
