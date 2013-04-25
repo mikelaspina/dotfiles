@@ -18,4 +18,6 @@ fi
 
 PATH="/opt/nr/camp/bin:$PATH"
 
-export PATH
+CLICOLOR=1
+
+export PATH CLICOLOR
