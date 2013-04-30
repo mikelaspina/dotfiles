@@ -15,9 +15,3 @@ fi
 #
 # ENV customizations
 #
-
-PATH="/opt/nr/camp/bin:$PATH"
-
-CLICOLOR=1
-
-export PATH CLICOLOR
