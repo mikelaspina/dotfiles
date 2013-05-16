@@ -8,6 +8,14 @@
 
 PS1="[\u@\h \W]\$ "
 
+OS=$( uname -s )
+
+case "$OS" in
+  'Darwin'|'FreeBSD')
+    export CLICOLOR=1
+    ;;
+esac
+
 #
 # Aliases
 #
@@ -15,3 +23,9 @@ PS1="[\u@\h \W]\$ "
 alias la="ls -lA"
 alias ll="ls -l"
 alias lsa="ls -lah"
+
+if [[ 'Darwin' == "$OS" ]]; then
+  if [[ -x /Applications/Emacs.app/Contents/MacOS/Emacs ]]; then
+    alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+  fi
+fi
