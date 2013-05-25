@@ -24,6 +24,10 @@ alias la="ls -lA"
 alias ll="ls -l"
 alias lsa="ls -lah"
 
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+
 if [[ 'Darwin' == "$OS" ]]; then
   if [[ -x /Applications/Emacs.app/Contents/MacOS/Emacs ]]; then
     alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
