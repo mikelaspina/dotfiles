@@ -1,6 +1,10 @@
-# .zshrc
+# -*- mode: shell-script; coding: utf-8; fill-column: 78; -*-
+
 #
-# 
+# Common ZSH customizations that should always be enabled.
+#
+# Author: Mike LaSpina
+#
 
 PROMPT='[%n@%m %1~]%# '
 RPROMPT=
@@ -9,19 +13,28 @@ autoload -U compinit colors
 compinit
 colors
 
-# Customize directory listings
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-alias ls="ls -GFh"
+OS=$( uname -s )
 
-if [[ $( uname -s ) == 'Darwin' ]]; then
-  alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
-fi
+case "$OS" in
+  'Darwin'|'FreeBSD')
+    export CLICOLOR=1
+    ;;
+esac
 
-export EDITOR=emacs
-export PATH=$PATH:/usr/local/go/bin
-
+#
 # Aliases
-alias ll="ls -l"
+#
 
-# Load RVM into a shell session *as a function*
-[[ -s "/Users/Mike/.rvm/scripts/rvm" ]] && source "/Users/Mike/.rvm/scripts/rvm" 
+alias la="ls -lAh"
+alias ll="ls -lh"
+alias lsa="ls -lah"
+
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+
+if [[ 'Darwin' == "$OS" ]]; then
+  if [[ -x /Applications/Emacs.app/Contents/MacOS/Emacs ]]; then
+    alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+  fi
+fi
