@@ -20,6 +20,9 @@ esac
 # Aliases
 #
 
+alias ..="cd .."
+alias ...="cd ../.."
+
 alias la="ls -lA"
 alias ll="ls -l"
 alias lsa="ls -lah"
