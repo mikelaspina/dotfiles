@@ -22,6 +22,7 @@ esac
 
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
 
 alias la="ls -lA"
 alias ll="ls -l"
