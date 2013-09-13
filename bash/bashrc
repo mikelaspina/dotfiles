@@ -6,9 +6,15 @@
 # Author: Mike LaSpina
 #
 
+# Must be an interactive shell.
+case $- in
+  *i*) ;;
+  *)   return ;;
+esac
+
 PS1="[\u@\h \W]\$ "
 
-OS=$( uname -s )
+OS=$(uname -s)
 
 case "$OS" in
   'Darwin'|'FreeBSD')
